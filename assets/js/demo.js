@@ -105,7 +105,7 @@ demo = {
 
         var dataPreferences = {
             series: [
-                [25, 30, 20, 25]
+                [62, 38]
             ]
         };
 
@@ -121,10 +121,12 @@ demo = {
         };
 
         Chartist.Pie('#chartPreferences', dataPreferences, optionsPreferences);
+        var a = 42;
+        var b = 32;
 
         Chartist.Pie('#chartPreferences', {
-          labels: ['62%','32%','6%'],
-          series: [62, 32, 6]
+          labels: [a,b],
+          series: [(a/(a+b))*100, (b/(a+b))*100]
         });
     },
 
@@ -199,7 +201,7 @@ demo = {
 
         var dataPreferences = {
             series: [
-                [25, 30, 20, 25]
+                [62, 38]
             ]
         };
 
@@ -215,10 +217,12 @@ demo = {
         };
 
         Chartist.Pie('#chartPreferences', dataPreferences, optionsPreferences);
+        var a = 12;
+        var b = 32;
 
         Chartist.Pie('#chartPreferences', {
-          labels: ['62%','32%','6%'],
-          series: [62, 32, 6]
+          labels: [a,b],
+          series: [(a/(a+b))*100, (b/(a+b))*100]
         });
     },
 

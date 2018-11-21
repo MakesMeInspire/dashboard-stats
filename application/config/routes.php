@@ -54,7 +54,10 @@ $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
 $route['login'] = 'Main/C_Index/login';
+$route['logout'] = 'Main/C_Index/logout';
 $route['validation'] = 'Main/C_Index/validation';
 $route['dashboard'] = 'Main/C_Index';
 $route['dashboard/data'] = 'Main/C_Index/table';
+$route['dashboard/user'] = 'Main/C_Index/user';
+$route['dashboard/profile'] = 'Main/C_Index/profile';
 $route['test'] = 'Main/C_Index/test';

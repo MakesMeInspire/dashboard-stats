@@ -13,6 +13,7 @@ class C_Index extends CI_Controller {
         $this->load->library('form_validation');
         $this->load->model('Module/M_Table');
         $this->load->model('Module/M_Login');
+        $this->load->model('Module/M_User');
     }
     
     public function session()
@@ -29,6 +30,7 @@ class C_Index extends CI_Controller {
         $this->session();
         $data['title'] = "Dashboard";
         $data['side'] = "1";
+        $data['userdetail'] = $this->M_User->getUserDetail($this->session->userdata('logged_in')['username']);
 		$this->load->view('Templates/V_Sidemenu', $data);
         $this->load->view('Templates/V_Navbar', $data);
         $this->load->view('Module/V_Dashboard');
@@ -41,6 +43,13 @@ class C_Index extends CI_Controller {
         $data['loginerror'] = $this->session->flashdata('error');
 		$this->load->view('Module/V_Login', $data);
         
+    }
+
+    public function logout()
+    {
+        $this->session->unset_userdata('logged_in');
+        $this->session->sess_destroy();
+        $this->session();
     }
 
     public function validation()
@@ -76,12 +85,43 @@ class C_Index extends CI_Controller {
         }
     }
 
+    public function user()
+    {   
+        $this->session();
+        $data['title'] = "Edit Profile";
+        $data['side'] = "2";
+        
+        $data['userdetail'] = $this->M_User->getUserDetail($this->session->userdata('logged_in')['username']);
+
+        $this->load->view('Templates/V_Sidemenu', $data);
+        $this->load->view('Templates/V_Navbar', $data);
+        $this->load->view('Module/V_User', $data);
+        $this->load->view('Templates/V_Footer');
+    }
+
+    public function profile()
+    {   
+        $this->session();
+        $data['title'] = "Profile";
+        $data['side'] = "2";
+        $data['special'] = "y";
+        $data['userdetail'] = $this->M_User->getUserDetail($this->session->userdata('logged_in')['username']);
+
+        $this->load->view('Templates/V_Sidemenu', $data);
+        $this->load->view('Templates/V_Navbar', $data);
+        $this->load->view('Module/V_Profile', $data);
+        $this->load->view('Templates/V_Footer');
+    }
+
     public function table()
     {   
         $this->session();
+        
         $data['title'] = "Tabel List";
         $data['side'] = "3";
         $data['datatabel'] = $this->M_Table->getData();
+        $data['userdetail'] = $this->M_User->getUserDetail($this->session->userdata('logged_in')['username']);
+        
         $this->load->view('Templates/V_Sidemenu', $data);
         $this->load->view('Templates/V_Navbar', $data);
         $this->load->view('Module/V_Table', $data);

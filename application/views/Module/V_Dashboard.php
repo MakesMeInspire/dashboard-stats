@@ -4,17 +4,16 @@
                         <div class="card">
 
                             <div class="header">
-                                <h4 class="title">Email Statistics</h4>
-                                <p class="category">Last Campaign Performance</p>
+                                <h4 class="title">Statistics Jawaban</h4>
+                                <p class="category">Data Jawaban Terakhir</p>
                             </div>
                             <div class="content">
                                 <div id="chartPreferences" class="ct-chart ct-perfect-fourth"></div>
 
                                 <div class="footer">
                                     <div class="legend">
-                                        <i class="fa fa-circle text-info"></i> Open
-                                        <i class="fa fa-circle text-danger"></i> Bounce
-                                        <i class="fa fa-circle text-warning"></i> Unsubscribe
+                                        <i class="fa fa-circle text-info"></i> Sudah Menjawab
+                                        <i class="fa fa-circle text-danger"></i> Belum Menjawab
                                     </div>
                                     <hr>
                                     <div class="stats">
