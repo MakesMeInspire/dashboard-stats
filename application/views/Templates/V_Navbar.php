@@ -7,16 +7,16 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"><?php echo $title ?></a>
+                    <a class="navbar-brand" href="#"><?php if(!empty($special)){ echo $userdetail['0']['fname']." ".$userdetail['0']['lname']." ".$title; }else{ echo $title; }  ?></a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-left">
-                        <li>
+                        <!-- <li>
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="fa fa-dashboard"></i>
 								<p class="hidden-lg hidden-md"><?php echo $title ?></p>
                             </a>
-                        </li>
+                        </li> -->
                         <li class="dropdown">
                               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <i class="fa fa-globe"></i>
@@ -45,11 +45,11 @@
 									</p>
                               </a>
                               <ul class="dropdown-menu">
-                                <li><a href="#">Action</a></li>
-                                <li><a href="#">Profile</a></li>
-                                <li><a href="#">Edit Profile</a></li>
+                                <li><a href="#"><?php if(!empty($userdetail)){ echo $userdetail['0']['fname']." ".$userdetail['0']['lname']; } ?></a></li>
+                                <li><a href="<?= base_url('dashboard/profile')?>">Profile</a></li>
+                                <li><a href="<?= base_url('dashboard/user')?>">Edit Profile</a></li>
                                 <li class="divider"></li>
-                                <li><a href="#">Logout</a></li>
+                                <li><a href="<?= base_url('logout')?>">Logout</a></li>
                               </ul>
                         </li>
 						<li class="separator hidden-lg"></li>

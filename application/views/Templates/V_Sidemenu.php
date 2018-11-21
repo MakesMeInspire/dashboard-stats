@@ -25,15 +25,21 @@
     <link href="<?= base_url('assets/css/demo.css')?>" rel="stylesheet" />
 
     <!--     Fonts and icons     -->
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+    <link href="<?= base_url('assets/css/plugins/font-awesome.min.css')?>" rel="stylesheet">
+    <link href="<?= base_url('assets/css/plugins/roboto.css')?>" rel='stylesheet' type='text/css'>
     <link href="<?= base_url('assets/css/pe-icon-7-stroke.css')?>" rel="stylesheet" />
+
+    <?php if(!empty($special)){?>
+        <link href="<?= base_url('assets/css/profile.css')?>" rel="stylesheet" />
+    <?php
+    }?>
+    
 
 </head>
 <body>
 
 <div class="wrapper">
-    <div class="sidebar" data-color="purple" data-image="<?= base_url('assets/img/sidebar-1.jpg')?>">
+    <div class="sidebar" data-color="azure" data-image="<?= base_url('assets/img/sidebar-2.jpg')?>">
 
     <!--
 
@@ -44,7 +50,7 @@
 
     	<div class="sidebar-wrapper">
             <div class="logo">
-                <a href="http://www.creative-tim.com" class="simple-text">
+                <a href="<?= base_url('')?>" class="simple-text">
                     Creative Tim
                 </a>
             </div>
@@ -57,7 +63,7 @@
                     </a>
                 </li>
                 <li <?php if($side == 2){?>class="active"<?php } ?>>
-                    <a href="#">
+                    <a href="<?= base_url('dashboard/profile')?>">
                         <i class="pe-7s-user"></i>
                         <p>User Profile</p>
                     </a>
