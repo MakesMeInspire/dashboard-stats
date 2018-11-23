@@ -1,14 +1,13 @@
 <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-12">
                         <div class="card">
-
                             <div class="header">
                                 <h4 class="title">Statistics Jawaban</h4>
                                 <p class="category">Data Jawaban Terakhir</p>
                             </div>
                             <div class="content">
-                                <div id="chartPreferences" class="ct-chart ct-perfect-fourth"></div>
+                                <div id="chartPreferences" class="ct-chart"></div>
 
                                 <div class="footer">
                                     <div class="legend">
@@ -17,14 +16,14 @@
                                     </div>
                                     <hr>
                                     <div class="stats">
-                                        <i class="fa fa-clock-o"></i> Campaign sent 2 days ago
+                                        <i class="fa fa-clock-o"></i> Last Update 1 days ago
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-md-8">
+                    <!-- <div class="col-md-8">
                         <div class="card">
                             <div class="header">
                                 <h4 class="title">Users Behavior</h4>
@@ -45,7 +44,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> 
                 </div>
 
 
@@ -200,6 +199,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>

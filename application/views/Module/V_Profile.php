@@ -7,8 +7,8 @@
 					</div>
 					<div class="box-inner">
 						<h3 class="name"><?= $userdetail['0']['fname']." ".$userdetail['0']['lname']?></h3>
-						<h4 class="occupation"><?= $userdetail['0']['status']?></h4>
-						<p class="location"><i class="fa fa-map-marker"></i>Yogyakarta</p>
+						<h4 class="occupation"><?= $status['0']['status']?></h4>
+						<p class="location"><i class="fa fa-map-marker"></i>Yogyakarta, Indonesia</p>
 						<h3 class="followers-title">"<?= $userdetail['0']['info']?>"</h3>
 						
 					</div>

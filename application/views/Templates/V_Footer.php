@@ -235,6 +235,10 @@
 	<script src="<?= base_url('assets/js/light-bootstrap-dashboard.js?v=1.4.0')?>"></script>
 
 	<!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
+    <script type="text/javascript">
+        var sudah = "<?php echo $userSudah; ?>";
+        var belum = "<?php echo $userBelum; ?>";
+	</script>
 	<script src="<?= base_url('assets/js/demo.js')?>"></script>
 
     <!-- Table JQuery data tables -->

@@ -30,11 +30,13 @@ class C_Index extends CI_Controller {
         $this->session();
         $data['title'] = "Dashboard";
         $data['side'] = "1";
+        $data['userSudah'] = $this->M_User->getUserSudah();
+        $data['userBelum'] = $this->M_User->getUserBelum();
         $data['userdetail'] = $this->M_User->getUserDetail($this->session->userdata('logged_in')['username']);
 		$this->load->view('Templates/V_Sidemenu', $data);
         $this->load->view('Templates/V_Navbar', $data);
         $this->load->view('Module/V_Dashboard');
-        $this->load->view('Templates/V_Footer');
+        $this->load->view('Templates/V_Footer', $data);
     }
     
     public function login()
@@ -105,6 +107,7 @@ class C_Index extends CI_Controller {
         $data['title'] = "Profile";
         $data['side'] = "2";
         $data['special'] = "y";
+        $data['status'] = $this->M_User->getUserStatus($this->session->userdata('logged_in')['username']);
         $data['userdetail'] = $this->M_User->getUserDetail($this->session->userdata('logged_in')['username']);
 
         $this->load->view('Templates/V_Sidemenu', $data);
