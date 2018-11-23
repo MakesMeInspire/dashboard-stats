@@ -5,7 +5,7 @@
 	<link rel="icon" type="image/png" href="<?= base_url('assets/img/favicon.ico')?>">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-	<title>Light Bootstrap Dashboard by Creative Tim</title>
+	<title>WB Panel</title>
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
     <meta name="viewport" content="width=device-width" />
@@ -56,54 +56,122 @@
             </div>
 
             <ul class="nav">
-                <li <?php if($side == 1){?>class="active"<?php } ?>>
-                    <a href="<?= base_url('dashboard')?>">
-                        <i class="pe-7s-graph"></i>
-                        <p>Dashboard</p>
-                    </a>
-                </li>
-                <li <?php if($side == 2){?>class="active"<?php } ?>>
-                    <a href="<?= base_url('dashboard/profile')?>">
-                        <i class="pe-7s-user"></i>
-                        <p>User Profile</p>
-                    </a>
-                </li>
-                <li <?php if($side == 3){?>class="active"<?php } ?>>
-                    <a href="<?= base_url('dashboard/data')?>">
-                        <i class="pe-7s-note2"></i>
-                        <p>Table List</p>
-                    </a>
-                </li>
-                <li <?php if($side == 4){?>class="active"<?php } ?>>
-                    <a href="#">
-                        <i class="pe-7s-news-paper"></i>
-                        <p>Typography</p>
-                    </a>
-                </li>
-                <li <?php if($side == 5){?>class="active"<?php } ?>>
-                    <a href="#">
-                        <i class="pe-7s-science"></i>
-                        <p>Icons</p>
-                    </a>
-                </li>
-                <li <?php if($side == 6){?>class="active"<?php } ?>>
-                    <a href="#">
-                        <i class="pe-7s-map-marker"></i>
-                        <p>Maps</p>
-                    </a>
-                </li>
-                <li <?php if($side == 7){?>class="active"<?php } ?>>
-                    <a href="#">
-                        <i class="pe-7s-bell"></i>
-                        <p>Notifications</p>
-                    </a>
-                </li>
-				<li class="active-pro">
-                    <a href="#">
-                        <i class="pe-7s-rocket"></i>
-                        <p>Upgrade to PRO</p>
-                    </a>
-                </li>
+                <?php
+                    if($userdetail['0']['status'] == '1'){
+                        ?>
+                            <li <?php if($side == 1){?>class="active"<?php } ?>>
+                                <a href="<?= base_url('dashboard')?>">
+                                    <i class="pe-7s-graph"></i>
+                                    <p>Dashboard</p>
+                                </a>
+                            </li>
+                            <li <?php if($side == 2){?>class="active"<?php } ?>>
+                                <a href="<?= base_url('dashboard/profile')?>">
+                                    <i class="pe-7s-user"></i>
+                                    <p>User Profile</p>
+                                </a>
+                            </li>
+                            <li <?php if($side == 3){?>class="active"<?php } ?>>
+                                <a href="<?= base_url('dashboard/data')?>">
+                                    <i class="pe-7s-note2"></i>
+                                    <p>Table List</p>
+                                </a>
+                            </li>
+                            <li <?php if($side == 4){?>class="active"<?php } ?>>
+                                <a href="#">
+                                    <i class="pe-7s-news-paper"></i>
+                                    <p>Typography</p>
+                                </a>
+                            </li>
+                            <li <?php if($side == 5){?>class="active"<?php } ?>>
+                                <a href="#">
+                                    <i class="pe-7s-science"></i>
+                                    <p>Icons</p>
+                                </a>
+                            </li>
+                            <li <?php if($side == 6){?>class="active"<?php } ?>>
+                                <a href="#">
+                                    <i class="pe-7s-map-marker"></i>
+                                    <p>Maps</p>
+                                </a>
+                            </li>
+                            <li <?php if($side == 7){?>class="active"<?php } ?>>
+                                <a href="#">
+                                    <i class="pe-7s-bell"></i>
+                                    <p>Notifications</p>
+                                </a>
+                            </li>
+                            <li class="active-pro">
+                                <a href="#">
+                                    <i class="pe-7s-rocket"></i>
+                                    <p>Upgrade to PRO</p>
+                                </a>
+                            </li>
+                        <?php
+                    }elseif($userdetail['0']['status'] == '2'){
+                        ?>
+                            <li <?php if($side == 1){?>class="active"<?php } ?>>
+                                <a href="<?= base_url('dashboard')?>">
+                                    <i class="pe-7s-graph"></i>
+                                    <p>Dashboard</p>
+                                </a>
+                            </li>
+                            <li <?php if($side == 2){?>class="active"<?php } ?>>
+                                <a href="<?= base_url('dashboard/profile')?>">
+                                    <i class="pe-7s-user"></i>
+                                    <p>User Profile</p>
+                                </a>
+                            </li>
+                            <li <?php if($side == 3){?>class="active"<?php } ?>>
+                                <a href="<?= base_url('dashboard/data')?>">
+                                    <i class="pe-7s-note2"></i>
+                                    <p>Table List</p>
+                                </a>
+                            </li>
+                            <li <?php if($side == 4){?>class="active"<?php } ?>>
+                                <a href="#">
+                                    <i class="pe-7s-news-paper"></i>
+                                    <p>Typography</p>
+                                </a>
+                            </li>
+                             <li class="active-pro">
+                                <a href="#">
+                                    <i class="pe-7s-rocket"></i>
+                                    <p>Upgrade to PRO</p>
+                                </a>
+                            </li>
+                        <?php
+                    }else{
+                        ?>
+                            <li <?php if($side == 1){?>class="active"<?php } ?>>
+                                <a href="<?= base_url('dashboard')?>">
+                                    <i class="pe-7s-graph"></i>
+                                    <p>Dashboard</p>
+                                </a>
+                            </li>
+                            <li <?php if($side == 2){?>class="active"<?php } ?>>
+                                <a href="<?= base_url('dashboard/profile')?>">
+                                    <i class="pe-7s-user"></i>
+                                    <p>User Profile</p>
+                                </a>
+                            </li>
+                            <li <?php if($side == 3){?>class="active"<?php } ?>>
+                                <a href="<?= base_url('dashboard/data')?>">
+                                    <i class="pe-7s-note2"></i>
+                                    <p>Table List</p>
+                                </a>
+                            </li>
+                             <li class="active-pro">
+                                <a href="#">
+                                    <i class="pe-7s-rocket"></i>
+                                    <p>Upgrade to PRO</p>
+                                </a>
+                            </li>
+                        <?php
+                    }
+                ?>
+
+                
             </ul>
     	</div>
     </div>
