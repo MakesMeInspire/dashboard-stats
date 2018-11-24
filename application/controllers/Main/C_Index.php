@@ -92,7 +92,7 @@ class C_Index extends CI_Controller {
         $this->session();
         $data['title'] = "Edit Profile";
         $data['side'] = "2";
-        
+        $data['status'] = $this->M_User->getUserStatus($this->session->userdata('logged_in')['username']);
         $data['userdetail'] = $this->M_User->getUserDetail($this->session->userdata('logged_in')['username']);
 
         $this->load->view('Templates/V_Sidemenu', $data);

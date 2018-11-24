@@ -121,13 +121,20 @@ demo = {
         };
 
         Chartist.Pie('#chartPreferences', dataPreferences, optionsPreferences);
-        var a = 42;
-        var b = 32;
+        var a = sudah;
+        var b = belum;
 
-        Chartist.Pie('#chartPreferences', {
-          labels: [a,b],
-          series: [(a/(a+b))*100, (b/(a+b))*100]
-        });
+        if(a=='0'){
+          Chartist.Pie('#chartPreferences', {
+            labels: [" ",b],
+            series: [(a/(a+b))*100, (b/(a+b))*100]
+          });
+        }else{
+          Chartist.Pie('#chartPreferences', {
+            labels: [a,b],
+            series: [(a/(a+b))*100, (b/(a+b))*100]
+          });
+        }
     },
 
     initChartist: function(){
@@ -217,13 +224,20 @@ demo = {
         };
 
         Chartist.Pie('#chartPreferences', dataPreferences, optionsPreferences);
-        var a = 12;
-        var b = 32;
+        var a = sudah;
+        var b = belum;
 
-        Chartist.Pie('#chartPreferences', {
-          labels: [a,b],
-          series: [(a/(a+b))*100, (b/(a+b))*100]
-        });
+        if(a=='0'){
+          Chartist.Pie('#chartPreferences', {
+            labels: [" ",b],
+            series: [(a/(a+b))*100, (b/(a+b))*100]
+          });
+        }else{
+          Chartist.Pie('#chartPreferences', {
+            labels: [a,b],
+            series: [(a/(a+b))*100, (b/(a+b))*100]
+          });
+        }
     },
 
     initGoogleMaps: function(){

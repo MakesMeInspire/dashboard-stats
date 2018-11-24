@@ -90,7 +90,7 @@
                                     <img class="avatar border-gray" src="http://remtsoy.com/experiments/user_card/img/avatar.jpg" alt="..."/>
 
                                       <h4 class="title"><?= $userdetail['0']['fname']." ".$userdetail['0']['lname']?><br />
-                                         <small><?= $userdetail['0']['status']?></small>
+                                         <small><?= $status['0']['status']?></small>
                                       </h4>
                                     </a>
                                 </div>
